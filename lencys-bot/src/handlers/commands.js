@@ -21,8 +21,6 @@ module.exports = {
       if (command.requiredUserPermissions !== false && !interaction.member.permissions.has(command.requiredUserPermissions)) return ctx.reply.error({ content: `You must have ${command.requiredUserPermissions.map((value) => `\`${ctx.case.title(value.replace(/_/gi, ' '))}\``)} permission to use the command.` });
       if (command.requiredClientPermissions !== false && !interaction.guild.me.permissions.has(command.requiredClientPermissions)) return ctx.reply.error({ content: `${command.requiredClientPermissions.length == 1 ? `I need ${command.requiredClientPermissions.map((value) => `\`${ctx.case.title(value.replace(/_/gi, ' '))}\``)} permission.` : `I need ${command.requiredClientPermissions.map((value) => `\`${ctx.case.title(value.replace(/_/gi, ' '))}\``).join(' and ')} permissions.`}` });
     
-      if (await restartingModel.findOne({ status: true }) && !ctx.config.data.developers.includes(interaction.user.id)) return ctx.reply.error({ content: `The system is rebooting. This may take several minutes.` });
-
       if (client.cooldowns.has(`${interaction.commandName}_${interaction.user.id}`)) {
 
         let finish = client.cooldowns.get(`${interaction.commandName}_${interaction.user.id}`); 
