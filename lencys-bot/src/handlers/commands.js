@@ -1,7 +1,5 @@
 const { MessageEmbed } = require('discord.js');
 
-const restartingModel = require('../models/restart.js');
-
 module.exports = {
   
   name: 'interactionCreate',
