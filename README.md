@@ -1,5 +1,8 @@
+# config.js
+* Ayarları yapmayı unutmayın.
 # Bilgi
 * Slaş ve Uygulama yükleme & işleme bulunmaktadır.
+* MongoDB kullanılmaktadır.
 * Bot tamamen İngilizcedir.
 # Emojiler
 * https://discord.gg/6NEaEH587w sunucuya girip #emojis kanalından emojileri alabilirsiniz.
