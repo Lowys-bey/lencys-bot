@@ -20,8 +20,6 @@ module.exports = {
       //if (app.ownerOnly !== false && interaction.user.id !== interaction.guild.ownerId) return  ctx.reply.error({ content: `You must be the server owner to use the app.` });
       if (app.requiredUserPermissions !== false && !interaction.member.permissions.has(app.requiredUserPermissions)) return ctx.reply.error({ content: `You must have ${app.requiredUserPermissions.map((value) => `\`${ctx.case.title(value.replace(/_/gi, ' '))}\``)} permission to use the app.` });
       //if (app.requiredClientPermissions !== false && !interaction.guild.me.permissions.has(app.requiredClientPermissions)) return ctx.reply.error({ content: `${app.requiredClientPermissions.length == 1 ? `I need ${app.requiredClientPermissions.map((value) => `\`${ctx.case.title(value.replace(/_/gi, ' '))}\``)} permission.` : `I need ${app.requiredClientPermissions.map((value) => `\`${ctx.case.title(value.replace(/_/gi, ' '))}\``).join(' and ')} permissions.`}` });
-    
-      if (await restartingModel.findOne({ STATUS: true }) && !ctx.config.data.developers.includes(interaction.user.id)) return ctx.reply.error({ content: `The system is rebooting. This may take several minutes.` });
   
       console.log(`${ctx.config.log.time} ${ctx.terminal.color({ text: 'APP', hex: ctx.config.color.confirmation, bold: true })} ${ctx.terminal.color({ text: interaction.commandName, hex: '#FFFFFF' })} by ${ctx.terminal.color({ text: `${interaction.user.tag} (${interaction.user.id})`, hex: ctx.config.color.info })}`);
   
