@@ -22,7 +22,7 @@ module.exports = {
 
     default: '#2F3136',
 
-    confirmation: '#42ED45',
+    confirmation: '#57F287',
     error: '#ED4245',
 
     info: '#5865F2',
