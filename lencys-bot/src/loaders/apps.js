@@ -25,8 +25,8 @@ module.exports = async (client) => {
 
   console.log(`${ctx.terminal.color({ text: 'APPS', hex: '#FFFFFF', bold: true })}\n\n${dataArray.map((value, row) => `  ${ctx.terminal.color({ text: `${row +1}.`, hex: '#FFFFFF', bold: true })} ${value}`).join('\n')}\n`);
 
-  /* client.on('ready', async () => {
+  client.on('ready', async () => {
 
     client.application.commands.set(appsArray);
-  }); */
+  });
 };
