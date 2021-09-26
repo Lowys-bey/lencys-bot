@@ -5,7 +5,7 @@
 * MongoDB kullanılmaktadır.
 * Bot tamamen İngilizcedir.
 # Emojiler
-* https://discord.gg/6NEaEH587w sunucuya girip #emojis kanalından emojileri alabilirsiniz.
+* Kullanılan emojileri [bu](https://discord.gg/6NEaEH587w) sunucudan indirebilirsiniz.
 # Moderasyon Komutları
 * Komutlar tamamen hatasızdır, oluşabilecek tüm hatalar %99 engellenmiştir.
 # Komutlar
