@@ -1,1 +1,1 @@
-const client = require('./client.js'); new client().loader();
+new (require('./client.js'))().loader();
