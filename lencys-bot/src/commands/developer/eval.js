@@ -68,7 +68,7 @@ module.exports = {
             .setColor(ctx.config.color.default)
             .addFields([
               { name: `Input`, value: `\`\`\`js\n${code}\`\`\`` },
-              { name: `Output`, value: `\`\`\`js\n${clean(evaled).length > 1000 ? `${clean(evaled).slice(0, 1000)}...` : `${clean(evaled)}` }\`\`\`` },
+              { name: `Output`, value: `\`\`\`js\n${clean(evaled).length > 1000 ? `${clean(evaled).slice(0, 1000)}...` : `${clean(evaled)}`}\`\`\`` },
               { name: `Type`, value: `\`${typeof(evaled)}\``, inline: true },
               { name: `Displayed`, value: `\`${clean(evaled).length > 1000 ? '1.000' : ctx.case.number(clean(evaled).length)}/${ctx.case.number(clean(evaled).length)}\``, inline: true },
               { name: `Delay`, value: `\`0.0${ctx.client.ws.ping} ms\``, inline: true },
@@ -84,7 +84,7 @@ module.exports = {
           embeds: [
             new MessageEmbed()
             .setColor(ctx.config.color.default)
-            .setDescription(`**Output**\n\`\`\`js\n${clean(evaled).length > 2000 ? `${clean(evaled).slice(0, 2000)}...` : `${clean(evaled)}` }\`\`\``)
+            .setDescription(`**Output**\n\`\`\`js\n${clean(evaled).length > 2000 ? `${clean(evaled).slice(0, 2000)}...` : `${clean(evaled)}`}\`\`\``)
             .addFields([
               { name: `Type`, value: `\`${typeof(evaled)}\``, inline: true },
               { name: `Displayed`, value: `\`${clean(evaled).length > 2000 ? '2.000' : ctx.case.number(clean(evaled).length)}/${ctx.case.number(clean(evaled).length)}\``, inline: true },
