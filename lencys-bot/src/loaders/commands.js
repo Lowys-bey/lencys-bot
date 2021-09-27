@@ -15,7 +15,7 @@ module.exports = async (client) => {
     let command = require(value);
 
     if (!command.name) return;
-    if (command.description == undefined || command.type == undefined || command.cooldown == undefined || command.requiredUserPermissions == undefined || command.requiredClientPermissions == undefined || command.disabled == undefined || command.developerOnly == undefined) return dataArray.push(`${ctx.terminal.color({ text: command.name, hex: ctx.config.color.error })} ${ctx.terminal.color({ text: `(${value.split('commands/')[1]})`, hex: ctx.config.color.info })}`);
+    if (command.description == undefined || command.type == undefined || command.options == undefined || command.cooldown == undefined || command.ownerOnly == undefined || command.requiredUserPermissions == undefined || command.requiredClientPermissions == undefined || command.disabled == undefined || command.developerOnly == undefined) return dataArray.push(`${ctx.terminal.color({ text: command.name, hex: ctx.config.color.error })} ${ctx.terminal.color({ text: `(${value.split('commands/')[1]})`, hex: ctx.config.color.info })}`);
 
     commandsArray.push(command);
     dataArray.push(`${ctx.terminal.color({ text: command.name, hex: ctx.config.color.confirmation })} ${ctx.terminal.color({ text: `(${value.split('commands/')[1]})`, hex: ctx.config.color.info })}`);
