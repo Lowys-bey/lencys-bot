@@ -30,7 +30,7 @@ module.exports = {
 
     let command = ctx.interaction.options.getString('command');
 
-    if (ctx.client.commands.has(command)) {
+    if (command && ctx.client.commands.has(command)) {
 
       ctx.interaction.reply({
 
@@ -50,13 +50,13 @@ module.exports = {
         ],
       });
 
-    } else if (!ctx.client.commands.has(command)) {
+    } else if (!command) {
 
-      ctx.interaction.reply({ ephemeral: true, content: `Null` })
+      ctx.interaction.reply({ ephemeral: true, content: `Null` });
 
     } else {
 
-      ctx.reply.error(`Command not found.`)
+      ctx.reply.error({ content: `Command not found.` });
 
     };
   },
