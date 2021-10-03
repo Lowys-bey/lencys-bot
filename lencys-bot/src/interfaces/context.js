@@ -256,7 +256,6 @@ module.exports = class Context {
                       new MessageActionRow().addComponents(
                         new MessageButton({ style: 'PRIMARY', emoji: config.emoji.button.previous, customId: 'previous', disabled: false }),
                         new MessageButton({ style: 'PRIMARY', emoji: config.emoji.button.next, customId: 'next', disabled: false }),
-  
                         new MessageButton({ style: 'DANGER', emoji: config.emoji.button.delete, customId: 'delete', disabled: false }),
                       ),
                     ],
