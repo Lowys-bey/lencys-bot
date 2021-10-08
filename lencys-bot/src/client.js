@@ -55,13 +55,13 @@ module.exports = class extends Client {
     this.cooldowns = new Collection();
   };
 
-  loader() {
+  async loader() {
 
-    require('./loaders/events.js')(this);
-    require('./loaders/apps.js')(this);
-    require('./loaders/commands.js')(this);
-    require('./loaders/database.js')(this);
+    await require('./loaders/events.js')(this);
+    await require('./loaders/apps.js')(this);
+    await require('./loaders/commands.js')(this);
+    await require('./loaders/database.js')(this);
 
-    this.login(ctx.config.data.token);
+    await this.login(ctx.config.data.token);
   };
 };
