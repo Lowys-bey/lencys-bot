@@ -1,10 +1,3 @@
-# config.js
-* Ayarları yapmayı unutmayın.
-# Bilgi
-* Slaş ve Uygulama yükleme & işleme bulunmaktadır.
-* MongoDB kullanılmaktadır.
-* Bot tamamen İngilizcedir.
-# Emojiler
-* Kullanılan emojileri [bu discord](https://discord.gg/7unJhRc6Rn) sunucusundan indirebilirsiniz.
-# Moderasyon Komutları
-* Komutlar tamamen hatasızdır, oluşabilecek tüm hatalar %99 engellenmiştir.
+<div align="center">
+  <a href="https://discord.gg/7unJhRc6Rn" target="_blank"><img src="https://img.shields.io/badge/-Discord-5865f2?style=for-the-badge&logo=discord&logoColor=white"/>
+</div>
