@@ -31,7 +31,7 @@ module.exports = {
     let user = ctx.interaction.options.getUser('user') || ctx.interaction.user;
     let member = ctx.interaction.guild.members.cache.get(user.id);
   
-    if (user.bot) return ctx.reply.error(`This command can only be used on users.`);
+    if (user.bot) return ctx.reply.error({ content: `This command can only be used on users.` });
   
     let badges;
   
