@@ -6,7 +6,6 @@ module.exports = class extends Client {
 
   constructor() {
     super({
-
       intents: [
         'GUILDS',
         'GUILD_MEMBERS',
